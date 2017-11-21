@@ -6,6 +6,7 @@ class Song < ActiveRecord::Base
   end
 
   def artist_name=(name)
+    binding.pry
     self.artist = Artist.find_by(:name => name)
     self.artist.name = name
   end
