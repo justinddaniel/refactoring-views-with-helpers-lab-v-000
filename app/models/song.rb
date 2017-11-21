@@ -9,4 +9,8 @@ class Song < ActiveRecord::Base
   def artist_name=(name)
     self.artist = Artist.find_or_create_by(:name => name)
   end
+
+  def self.destroy_all
+    self.all.clear
+  end
 end
