@@ -1,7 +1,7 @@
 module ArtistsHelper
   def display_artist(artist)
     if artist == nil || artist == ""
-      render '/songs/<%= self.id %>/edit'
+      render edit_song_path(song)
     else
       render artist_path
     end
